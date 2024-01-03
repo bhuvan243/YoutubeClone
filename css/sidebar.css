@@ -1,0 +1,35 @@
+#sidebar{
+    overflow-y: auto;
+}
+.side{
+    padding: 20px 0px;
+}
+.sidebar-main, .sidebar-you, .sidebar-subscriptions, .sidebar-explore, .sidebar-footer1{
+    border-bottom: 2px solid #303030;
+}
+.tab-container{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+    padding: 10px 30px;
+}
+.side-icon{
+    width: 29px;
+    height: 29px;
+}
+.tab-title{
+    font-size: 18px;
+}
+.sub-container-heading{
+    color: #AAAAAA;
+}
+/* Subscriptions tab */
+.sub-container-heading{
+    padding-left: 20px;
+}
+.subs-avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
