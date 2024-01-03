@@ -12,14 +12,17 @@
     /* justify-content: center; */
     align-items: center;
     gap: 20px;
-    padding: 10px 30px;
+    padding: 5px 30px;
+}
+.tab-container:hover{
+    background-color: #313131;
 }
 .side-icon{
     width: 29px;
     height: 29px;
 }
 .tab-title{
-    font-size: 18px;
+    font-size: 14px;
 }
 .sub-container-heading{
     color: #AAAAAA;

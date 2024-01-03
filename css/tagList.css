@@ -1,0 +1,29 @@
+#tablist{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    overflow-x: scroll;
+}
+#tablist::-webkit-scrollbar{
+    display: none;
+}
+.tablist-item{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #303030;
+    border-radius: 15px;
+}
+.all-tablist{
+    background-color: white;
+    color: black;
+}
+.rightArrow-container{
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    position: sticky;
+    right: 0;
+}
