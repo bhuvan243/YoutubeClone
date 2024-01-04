@@ -1,0 +1,28 @@
+#video-container{
+    width: 75vw;
+    height: 560px;
+    background-color: grey;
+}
+.details-container > div{
+    margin-top: 20px;
+}
+#video-title{
+    font-size: 24px;
+    font-weight: 500;
+}
+.video-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.proper-align{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.other-buttons{
+    gap: 15px;   
+}
+#video-views{
+    color: #aaaaaa;
+}

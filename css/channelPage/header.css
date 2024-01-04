@@ -1,0 +1,46 @@
+#channel-banner{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+#channel-details-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 0;
+}
+#channel-details{
+    display: flex;
+    align-items: center;
+}
+#channel-logo{
+    width: 150px;
+    height: 150px;
+}
+#channel-name{
+    font-size: 25px;
+    font-weight: 300;
+}
+#subscribers-count{
+    font-size: 13px;
+    color: #a4a4a4;
+}
+/* tab list */
+#channel-tab-list{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #a4a4a4;
+}
+.tab-item, .search-in-channel{
+    padding: 0 20px 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.tab-item:hover{
+    border-bottom: 1px solid #a4a4a4;
+}
+.active-tab{
+    color: white;
+    border-bottom: 1px solid white !important;
+}
