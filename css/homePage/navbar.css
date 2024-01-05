@@ -12,9 +12,14 @@
 }
 #search-bar{
     background-color: #121212;
+    color: white;
     width: 350px;
     height: 40px;
     border: 1px solid #303030;
+    padding: 0px 10px;
+}
+#search-bar:focus{
+    outline: none;
 }
 .searchIcon-div{
     padding: 5px 15px;

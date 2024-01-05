@@ -1,3 +1,6 @@
+#video-details-container{
+    padding: 20px;
+}
 #video-container{
     width: 75vw;
     height: 560px;

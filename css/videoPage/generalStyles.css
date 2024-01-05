@@ -1,6 +1,37 @@
-#video-details-container{
-    width: 75vw;
+main > section{
+    display: flex;
 }
-#suggestions-list-container{
-    width: 25vw;
+/* channel -information below video */
+#channel-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 1px solid #303030;
+    padding-top: 20px;
+}
+#channel-details{
+    display: flex;
+    align-items: center;
+}
+#channel-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+#channel-name{
+    font-size: 18px;
+    font-weight: 300;
+}
+#subscribers-count{
+    font-size: 13px;
+    font-weight: 200;
+    color: #a4a4a4;
+}
+#channel-description{
+    padding-left: 40px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #303030;
 }
