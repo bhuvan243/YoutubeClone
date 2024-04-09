@@ -1,8 +1,8 @@
-const API_KEY = "AIzaSyAxPlIqPv6QqnQOSRHB78opYEr-F1mlQuQ";
+const API_KEY = "AIzaSyC6wN54_0kCUGum64NtQvuNmfXe26W-rQk";
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
-const searchInput = document.getElementById('search-bar');
-const searchDiv = document.querySelector('.searchIcon-div');
-const displayBody = document.getElementById('thumbnails-container');
+const searchInput = document.getElementById("search-bar");
+const searchDiv = document.querySelector(".searchIcon-div");
+const displayBody = document.getElementById("thumbnails-container");
 ///////////////////////////////////////////////////
 
 async function fetchData(searchQuery, maxItems) {
@@ -19,7 +19,6 @@ async function fetchData(searchQuery, maxItems) {
 window.addEventListener("load", () => {
   fetchData("", 20);
 });
-
 
 searchDiv.addEventListener("click", () => {
   let userInput = searchInput.value;
@@ -67,14 +66,14 @@ async function displayCards(data, displayBody) {
     ele.channelObject = channelInfoObject;
 
     let subscribers = await getSubscription(ele.snippet.channelId);
-
     ele.subscriberCount = subscribers;
+
     let displayDuration = calDuration(ele.snippet.publishedAt);
 
-    let videoCard = document.createElement("a");
+    let videoCard = document.createElement("div");
 
     videoCard.className = "thumbnail";
-    videoCard.href = `./html/videoPage.html?videoId=${ele.id.videoId}`;
+    // videoCard.href = `./html/videoPage.html?videoId=${ele.id.videoId}`;
     // console.log(ele.id.videoId);
 
     // add data in session storage
@@ -83,7 +82,7 @@ async function displayCards(data, displayBody) {
         videoTitle: `${ele.snippet.title}`,
         channelLogo: `${ele.channelObject[0].snippet.thumbnails.high.url}`,
         channelName: `${ele.snippet.channelTitle}`,
-        channelDescription : `${ele.snippet.description}`,
+        channelDescription: `${ele.snippet.description}`,
         likeCount: `${ele.viewObject[0].statistics.viewCount}`,
         channelID: `${ele.snippet.channelId}`,
         subscribers: `${ele.subscriberCount[0].statistics.subscriberCount}`,
@@ -92,17 +91,22 @@ async function displayCards(data, displayBody) {
         "selectedVideoInformation",
         JSON.stringify(InfoSelectedVideo)
       );
+      window.location.href = "./html/videoPage.html?videoId=" + ele.id.videoId;
     });
 
     videoCard.innerHTML = `
           <div class="image-container">
-              <img src="${ele.snippet.thumbnails.high.url}" alt="thumbnail-image">
+              <img src="${
+                ele.snippet.thumbnails.high.url
+              }" alt="thumbnail-image">
               <div class="video-duration">23:54</div>
           </div>
           <div class="video-details-container">
               <div class="thumbnail-top">
                   <div class="channel-profile-pic">
-                      <img src="${ele.channelObject[0].snippet.thumbnails.high.url}" alt="channel-profile-pic">
+                      <img src="${
+                        ele.channelObject[0].snippet.thumbnails.high.url
+                      }" alt="channel-profile-pic">
                   </div>
                   <div class="video-title">${ele.snippet.title}</div>
                   <div class="video-side-menu">:</div>
@@ -156,7 +160,6 @@ function calDuration(publisedDate) {
 
 function calculateViews(viewCount) {
   let displayViews;
-  let count;
   if (viewCount < 1000) {
     displayViews = viewCount;
   } else if (viewCount >= 1000 && viewCount <= 999999) {

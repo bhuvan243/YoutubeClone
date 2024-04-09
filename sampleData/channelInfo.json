@@ -1,0 +1,43 @@
+{
+  "....this is comment....": "To fetch channel logo",
+  "kind": "youtube#channelListResponse",
+  "etag": "V9NEdkco0KgDHFWn-93evimsyT4",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "4MD5dAilATQTodLU8jEPbXB9iUs",
+      "id": "UCYi_2iWdjuktf9GzwCMIjtw",
+      "snippet": {
+        "title": "Aston Martin",
+        "description": "The official YouTube channel of Aston Martin. Intensity. Driven. #AstonMartin #INTENSITYDRIVEN\n",
+        "customUrl": "@astonmartin",
+        "publishedAt": "2005-11-03T11:46:21Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/3JVNTKlvrR_v9rlWAXDB2xCEcvHzVygQVNjZpsd-h49pqrR-L0mn_2J6MAfzGVVMszM3b1PB1y0=s88-c-k-c0x00ffffff-no-rj",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/3JVNTKlvrR_v9rlWAXDB2xCEcvHzVygQVNjZpsd-h49pqrR-L0mn_2J6MAfzGVVMszM3b1PB1y0=s240-c-k-c0x00ffffff-no-rj",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/3JVNTKlvrR_v9rlWAXDB2xCEcvHzVygQVNjZpsd-h49pqrR-L0mn_2J6MAfzGVVMszM3b1PB1y0=s800-c-k-c0x00ffffff-no-rj",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "Aston Martin",
+          "description": "The official YouTube channel of Aston Martin. Intensity. Driven. #AstonMartin #INTENSITYDRIVEN\n"
+        }
+      }
+    }
+  ]
+}

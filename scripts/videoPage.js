@@ -3,7 +3,7 @@ let urlParam = new URLSearchParams(window.location.search);
 let videoID = urlParam.get("videoId");
 let VideoContainer = document.getElementById("video-container");
 
-function onPlayerReady(event){
+function onPlayerReady(event) {
   event.target.playVideo();
 }
 window.addEventListener("load", () => {
@@ -46,7 +46,9 @@ function calculateLikes(likeCount) {
 // console.log(getSelectedVideoInfo);
 let correctLikeCount = calculateLikes(getSelectedVideoInfo.likeCount);
 let correctSubscriberCount = calculateLikes(getSelectedVideoInfo.subscribers);
-document.getElementById('sug-filter').innerText = `From ${getSelectedVideoInfo.channelName}`;
+document.getElementById(
+  "sug-filter"
+).innerText = `From ${getSelectedVideoInfo.channelName}`;
 document.getElementById("video-title").innerText =
   getSelectedVideoInfo.videoTitle;
 document.getElementById("like-count").innerText = correctLikeCount;
@@ -116,7 +118,7 @@ let recommendedSectionDiv = document.getElementById("suggestions-list");
 async function getRecommendedVideos(videoTitle) {
   try {
     let response = await fetch(
-      `${BASE_URL}/search?key=${API_KEY}&q=${videoTitle}&maxResults=16&part=snippet`
+      `${BASE_URL}/search?key=${API_KEY}&q=${videoTitle}&maxResults=10&part=snippet`
     );
     let data = await response.json();
     let dataList = data.items;
